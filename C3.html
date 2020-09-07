@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số nguyên âm trong mảng</title>
+</head>
+<body>
+<script>
+    function myFunction() {
+        const vowel = ['u', 'e', 'o', 'a', 'i', 'U', 'E', 'O', 'A', 'I'];
+
+        let inputString = prompt("Nhập chuỗi: ");
+        while (inputString.length === 0) {
+            inputString = prompt(" mời nhập lại: ");
+        }
+
+        let result = find(inputString.split(''));
+        if (result) {
+            document.write("Chuỗi vừa nhập có " + result + " kí tự nguyên âm!");
+        } else {
+            document.write("Chuỗi vừa nhập không có kí tự nguyên âm");
+        }
+
+        function find(array) {
+            let count = 0;
+            for (let i = 0; i < array.length; i++) {
+                if (vowel.indexOf(array[i]) !== -1) {
+                    count++;
+                }
+            }
+            if (count === 0) {
+                return false;
+            }
+            return count;
+        }
+    }
+    myFunction()
+</script>
+</body>
+</html>

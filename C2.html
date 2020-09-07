@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function myFunction(num,array) {
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] === num) {
+                return array.indexOf(num);
+            }
+        }
+        return "Không thuộc mảng";
+    }
+    let arr = [0, 1, 2, 3, 4];
+    let num = prompt("Nhập số cần tìm")
+    let result = myFunction(num,arr);
+    alert(result);
+</script>
+</body>
+</html>
